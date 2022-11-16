@@ -1,7 +1,73 @@
 $base-color: #c6538c;
 
 body {
-  background-color: blue;
   color: $base-color;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-areas:
+    "header header header"
+    " . main .";
+  justify-items: center;
+}
+header {
+  grid-area: header;
+  display: grid;
+  justify-items: center;
+}
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 1fr, 1fr;
+  justify-items: center;
+  width: 100%;
+  .board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 0.2rem;
+    row-gap: 0.2rem;
+    height: 7rem;
+    width: 11rem;
+    justify-items: center;
+    div {
+      border: 0.5px solid black;
+      width: 2rem;
+      height: 2.3rem;
+    }
+    input {
+      border: none;
+      width: inherit;
+      height: inherit;
+      padding: 0;
+    }
+  }
+
+  .keyboard {
+    width: 100%;
+
+    div[class*="key_row"] {
+      display: flex;
+      justify-content: center;
+
+      div {
+        height: 1.7rem;
+        width: 1.2rem;
+        margin: 0 3px 3px 0;
+      }
+      div.key_enter,
+      div.key_del {
+        width: min-content;
+      }
+    }
+    button {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.7rem;
+    }
+  }
 }
