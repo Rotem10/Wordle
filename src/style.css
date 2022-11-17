@@ -81,7 +81,7 @@ main .keyboard div[class*=key_row] div.key_del {
 }
 main .keyboard div[class*=key_row] div.key_enter button,
 main .keyboard div[class*=key_row] div.key_del button {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   padding: 0.1rem;
 }
 main .keyboard div[class*=key_row] div.key_enter button img,
@@ -95,5 +95,5 @@ main .keyboard button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }/*# sourceMappingURL=style.css.map */
